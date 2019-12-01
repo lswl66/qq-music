@@ -1,0 +1,2646 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="G:/swiper-5.1.0/swiper-5.1.0/package/css/swiper.min.css">
+        <title>ex2_拉勾</title>
+        <style>
+            body{
+                margin: 0;
+                font-size: 14px;
+                color: #333;
+                position: relative;
+            }
+            input{
+                outline: none;
+            }
+            .top_ads{
+                height: 80px;
+                text-align: center;             
+            }
+            .top_ads img{
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+            }
+            .menu{
+                height: 40px;
+                background: #333;
+                color: #afb5c0;
+                line-height: 10px;
+            }
+            .menu_son_passport{
+                position: relative;
+                right: 0px;
+                cursor: pointer;
+            }
+            .menu_son span{
+                display: inline-block;
+                width: 42px;
+                position: relative;
+                top: 15px;
+                left: 55px;
+                color: #00b38a;
+            }
+            .menu_son li{
+                padding-right: 25px;
+                cursor: pointer;
+            }
+            .menu li:hover{
+                color: #fff;
+            }
+            .menu p:hover{
+                color: #fff;
+            }
+            .menu_son{
+                position:relative;
+                /* left: 100px; */
+                width: 1166px;
+                margin: 0 auto;
+                display: flex; 
+            }
+            .menu_son p{
+                padding-right: 18px;
+                display: inline-block;
+            }
+            .menu_son ul li{
+                display: inline-block;
+            }
+            .menu_son ul li span{
+                display: inline-block;
+                font-size: 12px;
+                width: 29px;
+                text-align: center;
+                line-height: 16px;
+                position: absolute;
+                top: -12px;
+                left: 207px;
+                color: #fff;
+                padding-bottom: 2px;
+                background: #FF7452;
+                border-radius: 9px;
+                /* border: 5px solid #FF7452; */
+            }
+            .menu_son menu_son_country {
+                flex: 1;
+            }
+            .menu_son ul {
+                position: relative;
+                left: 72px;
+                top: 2px;
+                width: 800px;
+                list-style: none;
+            }
+            .menu_son_app{
+                display: inline-block;
+                position: relative;
+                right: -57px;
+                height: 38px;
+                line-height: 38px;
+                color: #00b38a;
+                cursor: pointer;
+            }
+            .menu_son_app:hover{
+                color: #05eaaf;
+            }
+            .menu_son_firm{
+                display: inline-block;
+                position: relative;
+                top: 13px;
+                right: -80px;
+                color: #afb5c0;
+                cursor: pointer;
+            }
+            .menu_son_firm:hover{
+                color: #fff;
+            }
+            .login{
+                background-color: #00b38a;
+                height: 120px;
+            }
+            .login img{
+                width: 228px;
+                height: 100%;
+                display: inline-block;
+            }
+            .login-son {
+                width: 334px;
+                height: 93px;
+                display: inline-block;
+                position: relative;
+                top: -33px;
+            }
+            .login-son img{
+                width: 334px;
+                height: 31px;
+                position: relative;
+                top: 14px;
+            }
+            .login-son p{
+                /* font-size: 14px; */
+                color: #fff;
+            }
+            .login_verify{
+                display: inline-block;
+                float: right;
+                border:0px;
+                position: relative;
+                top: 42.5px;
+                right: 65.5px;
+            }
+            .login_phone{
+                display: inline-block;
+                width: 182px;
+            }
+            .login_phone .phone_number{
+                width: 163px;
+                height: 35px;
+                padding-left: 10px;
+                /* font-size: 14px; */
+                line-height: 35px;
+                color: #333;
+                box-sizing: border-box;
+            }
+            .login_captcha{
+                width: 152px;
+                display: inline-block;
+                background: #fff;
+            }
+            .login_captcha .captcha{
+                width: 84px;
+                height: 31px;
+                padding-left: 10px;
+                line-height: 31px;
+                border: 0px;
+            }
+            .get_captcha{
+                border: 0px;
+                width: 52px;
+                height:33px;
+                background: #fff;
+                color: #00b38a;
+                cursor: pointer;
+                position: absolute;
+                z-index: 100;
+                left: 287px;
+                top: 2px;
+            }
+            .login_register{
+                padding-left: 5px;
+                display: inline-block;
+            }
+            .login_register button{
+                cursor: pointer;
+                text-align: center;
+                border: 1px solid #fff;
+                opacity: 0.9;
+                width:107px;
+                height: 35px;
+                background: #00b38a;
+                color: #fff;
+            }
+            .search{
+                background: #F2F5F4;
+                height:132px;
+            }
+            .search_about{           
+                width: 954px;  
+                display: block;
+                position: relative;
+                left:206px;
+                top:29px;
+            }
+            .search_box{
+                /* display: block; */
+                height: 44px;
+                line-height: 44px;
+                text-align: left;
+                padding-left: 12px;
+                border: 1px;
+                width: 795px;
+                margin: 0 auto;
+                font-size: 16px;
+            }
+            .search_button{
+                position: relative;
+                left: -4px;
+                top: 1px;
+                font-size: 18px;
+                border: 0px;
+                padding: 0px;
+                height: 46px;
+                width: 142px;
+                background: #00b38a;
+                color: #fff;
+                cursor: pointer;
+            }
+            .search_popular{
+                /* font-size: 14px; */
+                height: 19px;
+                position: relative;
+                top: -5px;
+                cursor: pointer;
+            }
+            .search_popular span{
+                color: #777
+            }
+            .search_popular ul{
+                list-style: none;
+                display: inline-block;
+                padding-left: 0px;
+            }
+            .search_popular li{
+                padding-left: 18px;
+                color: #00b38a;
+                display: inline-block;
+            }
+            .search_popular ul :hover{
+                text-decoration: underline;
+            }
+            .main{
+                width: 1200px;
+                margin: 0 auto;
+                padding-bottom: 90px;
+            }
+            .profession{
+                position: relative;
+                top: 40px;
+            }
+            .profession_list{
+                display: inline-block;
+            }
+            .profession .sort{
+                width: 321px;
+                height: 47px;
+                border: 1px solid transparent;
+                position: relative;
+            }
+            .profession .sort:hover .sort_div{
+                border: 1px solid #ddd;
+                border-right: none;
+                /* box-shadow: -1px 0px 10px #ddd; */
+                z-index: 1001;
+                background: #fff;
+            }
+            .profession_list .sort_span{
+                font-size: 18px;
+                padding-left: 5px;
+            }
+            .profession_list .sort_div{
+                height: 45px;
+                position: relative;
+                /* border: 1px solid transparent; */
+            } 
+            .profession_list .span_sign{
+                float:right;
+                height: 47px;
+                line-height: 47px;
+            }
+            .profession_list ul{
+                display: inline-block;
+                padding-left: 5px;
+            }
+            .profession_list ul :hover{
+                text-decoration: underline;
+                color: #00b38a;
+            }
+            .profession_list li{
+                display: inline-block;
+                padding-right: 16px;
+                cursor: pointer;
+                color: #555;
+                padding-bottom: 10px;
+            }
+            .profession_list .sort_hide{
+                display: none;
+                background: #fff;
+                padding-left: 20px;
+                width: 590px;
+                /* height: 300px; */
+                border: 1px solid #ddd;
+                /* box-shadow: 0 0 4px 2px #ddd; */
+                position: absolute;
+                z-index: 1000;
+                left: 320px;
+                top: 0px;
+            }
+            .profession_list .sort_hide span{
+                height: 47px;
+                line-height: 47px;
+            }
+            .profession_list .sort_hide_content ul{
+                margin: 0px;
+                display: block;
+            }
+            .profession_list .sort:hover .sort_hide{
+                display: inline-block;
+            } 
+            .profession_img{
+                display: inline-block;
+                width: 840px;
+                height: 346px;
+                position: relative;
+                left: 35px;
+                overflow: hidden;
+            }
+            .profession_img .swiper-slide img{
+                width: 840px;
+                height: 346px;
+                display: inline-block;
+            }
+            .main_jobs{
+                margin-top: 80px;
+            }
+            .separate_line_ul{
+                padding-left:0px; 
+                list-style: none;
+                border-bottom:1px solid #ddd; 
+            }
+            .separate_line_ul li{
+                cursor: pointer;
+                display: inline-block;
+                font-size: 16px;
+                padding-bottom: 15px;
+            }
+            .separate_line_ul_li{
+                border-bottom: 2px solid #000;
+            }
+            .main_sort_latest{
+                color: #999;
+            }
+            .separate_line_ul div{
+                display: inline-block;
+                width: 40px;
+            }
+            .main_popular_jobs_ul{
+                height: 190px;
+                padding:0 0 12px;
+                list-style: none;
+                /* display: inline-block; */
+                display: flex; 
+            }
+            .main_popular_jobs_li{
+                /* display: inline-block; */
+                height: 196px;
+                margin: 15px 16px 0 0;
+                flex: 1;
+                border: 1px solid #eaeeed;
+                padding: 1px 18px;
+            }
+            .main_popular_jobs_li:hover{
+                box-shadow: 0px 0px 5px #ddd;
+            }
+            .main_popular_jobs_li .main_popular_jobs_card{
+                display: inline-block;
+                position: relative;
+                /* padding: 20px 15px 15px; */
+                width: 351px;
+                height: 178px;
+                /* border: 1px solid #999; */
+            }
+            .main_popular_jobs_summary{
+                /* border-bottom: 1px dashed #e0e0e0;  */
+                position: relative;
+                top: 5px;
+            }
+            .main_popular_jobs_summary_jobsname p{
+                font-size: 16px;
+                cursor: pointer;
+                display: inline-block;
+            }
+            .main_popular_jobs_summary .send_time{
+                color: #999;
+                position: relative;
+            }
+            .main_popular_jobs_summary .jobs_salary{
+                font-size: 16px;
+                position: relative;
+                top: 16px;
+                float: right;
+                color: #FF7452;
+            }
+            .main_popular_jobs_summary_limit{
+                position: relative;
+                top: -8px;
+                color: #777;
+            }
+            .main_popular_jobs_summary_label{
+                position: relative;
+                top: 5px;
+            }
+            .main_popular_jobs_summary_label .label_word{
+                display: inline-block;
+                text-align: center;
+                width: 61px;
+                height: 26px;
+                padding: 0 5px;
+                line-height: 26px;
+                border: 1px solid #ddd;
+                font-size: 12px;
+                color: #999;
+            }
+            .jobs_card_icon_span{
+                background-image: url(http://www.lgstatic.com/www/static/index/modules/job_list/img/direct-recruit@2x_0d49da5.png);
+                background-size: 100%;
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                z-index: 100;;
+                top: -1px;
+                left: -18px;
+            }
+            .jobs_card_chatme{
+                background-image: url(http://www.lgstatic.com/lg-www-fed/index/modules/job_list/img/icon_chat2_d162651.png);
+                background-size: 16px 16px;
+                background-repeat: no-repeat;
+                display: inline-block;
+                cursor: pointer;
+                width: 30px;
+                height: 16px;
+                position: relative;
+                /* z-index: 100; */
+                top: 0px;
+                left: 0px;
+            }
+            .jobs_card_chatme_card1{
+                display: none;
+                cursor: pointer;
+                background: #FFF;
+                color: #333;
+                width: 312px;
+                height: 132px;
+                padding: 16px;
+                border: 1px solid #dce4e6;
+                position: absolute;
+                z-index: 100009;
+                left: 40px;
+                top: -36px;
+            }
+            .jobs_card_chatme_card1_triangle{
+                width: 14px;
+                height: 14px;
+                background: #FFF;
+                border: 1px solid #dce4e6;
+                border-bottom:none;
+                border-right: none;
+                transform: rotate(-45deg);
+                position: absolute;
+                top: 36px;
+                left: -8px;
+            }
+            .jobs_card_chatme_card1_left{
+                width: 188px;
+                display: inline-block;
+            }
+            .jobs_card_chatme_card1_right{
+                display: inline-block;
+                width: 118px;
+                height: 118px;
+            }
+            .jobs_card_chatme_card1_left img{
+                width: 62px;
+                height: 62px;
+                border-radius: 31px;
+            }
+            .jobs_card_chatme_card1_left .hr_name{
+                font-size: 18px;
+                /* display: inline-block; */
+            }
+            .jobs_card_chatme_card1_left .hr_info{
+                display: inline-block;
+                line-height: 22px;
+                position: relative;
+                top: -18px;
+                left: 5px;
+            }
+            .jobs_card_chatme:hover .jobs_card_chatme_card1{
+                display: block;
+            }
+            .jobs_card_chatme_card2{
+                display: none;
+                cursor: pointer;
+                background: #FFF;
+                width: 312px;
+                height: 132px;
+                padding: 16px;
+                border: 1px solid #dce4e6;
+                position: absolute;
+                z-index: 10009;
+                right: 52px;
+                top: -36px;
+            }
+            .jobs_card_chatme_card2_triangle{
+                width: 14px;
+                height: 14px;
+                background: #FFF;
+                border: 1px solid #dce4e6;
+                border-top:none;
+                border-left: none;
+                transform: rotate(-45deg);
+                position: absolute;
+                top: 36px;
+                right: -8px;
+            }
+            .jobs_card_chatme_card2_left{
+                width: 188px;
+                display: inline-block;
+            }
+            .jobs_card_chatme_card2_right{
+                display: inline-block;
+                width: 118px;
+                height: 118px;
+            }
+            .jobs_card_chatme_card2_left img{
+                width: 62px;
+                height: 62px;
+                border-radius: 31px;
+            }
+            .jobs_card_chatme_card2_left .hr_name{
+                font-size: 18px;
+                /* display: inline-block; */
+            }
+            .jobs_card_chatme_card2_left .hr_info{
+                display: inline-block;
+                line-height: 22px;
+                position: relative;
+                top: -18px;
+                left: 5px;
+            }
+            .jobs_card_chatme:hover .jobs_card_chatme_card2{
+                display: block;
+            }
+            .main_popular_jobs_firm{
+                padding-top: 5px; 
+                position: relative;
+                top: 30px;
+                border-top: 1px dashed #e0e0e0; 
+            }
+            .main_popular_jobs_firm img{
+                padding-top: 10px;
+                width: 40px;
+                height: 40px;
+            }
+            .main_popular_jobs_firm div{
+                /* padding-top:10px; */
+                display: inline-block;
+                position: relative;
+                top: -6px;
+            }
+            .main_popular_jobs_firm div a{ 
+                text-decoration: none;
+                color: #000;
+                display: block;
+            }
+            .main_popular_jobs_firm div:hover a{
+                color: #00b38a;
+            }
+            .main_popular_jobs_firm div span{ 
+                color: #999;
+                display: block;
+            }
+            .see_more{
+                text-decoration: none;
+                position: relative;
+                top: 15px;
+                width: 389px;
+                /* width: 387px; */
+                height: 44px;
+                line-height: 44px;
+                text-align: center;
+                font-size: 16px;
+                border: 1px solid #00b38a;
+                display: block;
+                margin: 0 auto;
+                cursor: pointer;
+                background: #fff;
+                color: #00b38a;
+                /* cursor: pointer; */
+                /* display: block; */
+                /* margin: 0 auto; */
+            }
+            .see_more:hover{
+                background: #00b38a;
+                color: #fff;
+            }
+            .popular_firm_ul{
+                width: 1216px;
+                height: 190px;
+                padding:0 0 12px;
+                margin-bottom:85px; 
+                list-style: none;
+                /* display: inline-block; */
+                display: flex; 
+            }
+            .popular_firm_li{
+                /* display: inline-block; */
+                width: 286px;
+                height: 268px;
+                margin: 15px 16px 0 0;
+                flex: 1;
+                border: 1px solid #eaeeed;
+                /* padding: 1px 18px; */
+            }
+            .popular_firm_li:hover{
+                box-shadow: 0px 0px 5px #ddd;
+            }
+            .popular_firm_li .popular_firm_card{
+                display: inline-block;
+                text-align: center;
+                position: relative;
+                top: -10px;
+                padding:0 15px 15px;
+                width: 256px;
+                height: 268px;
+                /* border: 1px solid #999; */
+            }
+            .popular_firm_summary{
+                /* border-bottom: 1px dashed #e0e0e0;  */
+                position: relative;
+                top: 20px;
+            }
+            .popular_firm_summary p{
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .popular_firm_summary span{
+                color: #555;
+            }
+            .popular_firm_summary_firmimg p{
+                font-size: 16px;
+                cursor: pointer;
+                display: block;
+            }
+            .popular_firm_summary_limit{
+                position: relative;
+                top: -8px;
+                color: #999;
+            }
+            .popular_firm_summary_firmimg img{
+                padding-top: 10px;
+                width: 80px;
+                height: 80px;
+            }
+            .popular_firm_date{
+                display: flex;
+                position: relative;
+                top: 30px;
+                border-top: 1px dashed #e0e0e0;
+                font-size: 12px;
+            }
+            .popular_firm_date div{
+                flex: 1;
+                cursor: pointer;
+            }
+            .popular_firm_date span{
+                width: 10px;
+            }
+            .popular_firm_date_number{
+                color: #00b38a;
+            }
+            .popular_firm_date_sort{
+                color: #999;
+                position: relative;
+                top: -10px;
+            }
+            .popular_firm_date :hover .popular_firm_date_sort{
+                color: #00b38a;
+            }
+            .friend_links ul{
+                padding: 0px;
+                width: 1120px;
+                position: relative;
+                top: 10px;
+                /* display: flex; */
+            }
+            .friend_links li{
+                /* flex: 1; */
+                padding: 8px 18px 8px 0px;
+                list-style: none;
+                display: inline-block;
+            }
+            .friend_links li:hover a{
+                color: #00b38a;
+                text-decoration:underline #00b38a;
+            }
+            .friend_links a{
+                color: #555;
+                text-decoration: none;
+            }
+            .friend_links{
+                position: relative;
+            }
+            .friend_links span{
+                cursor: pointer;
+                position: absolute;
+                top: 16px;
+                right: 0px;
+                color: #999;
+            }
+            .splitter{
+                border-top: 1px solid #ebebeb;
+            }
+            .foot{
+                width: 1200px;
+                margin: 0 auto;
+            }
+            .foot .inner_wrapper{
+                /* padding-top: 10px; */
+                position: relative;
+                top: -16px;
+                display: flex;
+                margin: 49px auto 66px;
+            }
+            .foot .inner_wrapper_left{
+                display: inline-block;
+                border-right: 1px solid #e8e8e8;
+                padding-right: 130px;
+            }
+            .foot_box{
+                text-decoration: none;
+                position: relative;
+                top: 15px;
+                width: 180px;
+                /* width: 387px; */
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                /* font-size: 16px; */
+                border: 1px solid #00b38a;
+                display: block;
+                /* margin: 0 auto; */
+                cursor: pointer;
+                background: #fff;
+                color: #00b38a;
+                /* cursor: pointer; */
+                /* display: block; */
+                /* margin: 0 auto; */
+            }
+            .foot_app:hover{
+                background: #00b38a;
+                color: #fff;
+            }
+            .foot_app{
+                margin-bottom:16px; 
+            }
+            .foot_mina{
+                margin-bottom:16px; 
+            }
+            .foot_mina:hover{
+                background: #00b38a;
+                color: #fff;
+            }
+            .foot_mina:hover div img{
+                display: inline-block;
+            }
+            .foot_mina div img{
+                display: none; 
+                width: 140px;
+                height: 140px;
+                box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+                position: absolute;
+                z-index: 10000;
+                top: 0px;
+                right: -150px;
+            }
+            .inner_wrapper_left .wechat{
+                display: inline-block;
+                height: 30px;
+                color: #555;
+                text-decoration: none;
+                position: relative;
+                top: 15px;
+                left: 19px;
+                cursor: pointer;
+            }
+            .inner_wrapper_left .weibo{
+                cursor: pointer;
+                display: inline-block;
+                color: #555;
+                text-decoration: none;
+                position: relative;
+                top: 15px;
+                left: 65px;
+            }
+            .inner_wrapper_left .wechat:hover{
+                color: #00b38a;
+            }
+            .inner_wrapper_left .weibo:hover{
+                color: #00b38a;
+            }
+            .inner_wrapper_left .wechat:hover img{
+                display: block;
+            }
+            .inner_wrapper_left .wechat img{
+                display: none; 
+                width: 140px;
+                height: 140px;
+                box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+                position: absolute;
+                z-index: 10000;
+                top: 30px;
+                right: -60px;
+            }
+            .inner_wrapper_left p span{
+                display: inline-block;
+                width: 61px;
+            }
+            .foot .inner_wrapper_right{
+                margin-left: 130px;
+                flex: 1;
+                display: flex;
+            }
+            .inner_wrapper_right div{
+                flex: 1;
+            }
+            .inner_wrapper_right p{
+                font-size: 18px;
+                font-weight: 600;
+                color: #555;
+                margin-bottom: 30px;
+            }
+            .inner_wrapper_right a,.inner_wrapper_right span{
+                display: block;
+                color: #555;
+                text-decoration: none;
+                margin-bottom: 10px;
+            }
+            .inner_wrapper_right a:hover{
+                color: #00b38a;
+            }
+            .copyright{
+                height: 100px;
+                background-color: #fafafa;
+            }
+            .copyright div{
+                color: #999;
+                margin: 28px auto;
+                /* position: relative;
+                left: 74.5px; */
+                height: 60px;
+                width: 1200px;
+            }
+            .copyright a{
+                text-decoration: none;
+                color: #999;
+                /* margin-left: 20px; */
+            }
+            .copyright .police{
+                position: relative;
+                left: 31px;
+            }
+            .copyright .filing:hover{
+                color: #555;
+            }
+            .copyright .police:hover{
+                color: #555;
+            }
+            .copyright p{
+                /* color: #999; */
+                font-size: 12px;
+                display: inline-block;
+                /* padding: 0 5px; */
+                /* width: 100px;
+                height: 100px; */
+                border: 1px solid #d5dadf;
+                padding: 8px 20px 8px 50px;
+                margin-left: 20px;
+                position: relative;
+                top: 15px;
+                left: 35px;
+            }
+            .copyright span{
+                display: block;
+                line-height: 14px;
+                margin: 0;
+            }
+            .rocket{
+                display: block;
+                background-image: url(https://www.lgstatic.com/lg-www-fed/common/widgets/footer_c/modules/img/backtop-new_0e4bcbc.png);
+                /* background-size: 100%; */
+                background-position: left top;
+                position: fixed;
+                right: 40px;
+                bottom: 95px;
+                z-index: 1000000;
+                background-repeat: no-repeat;
+                width: 28px;
+                height: 46px;
+                cursor: pointer;
+            }
+            .rocket:hover{
+                background-position: right;
+            }
+            .logo{
+                display: block;
+                background-image: url(https:///www.lgstatic.com/lg-www-fed/common/widgets/header_c/modules/img/sprite_361857f.png);
+                background-position: -10px -10px;
+                background-size: 150%;
+                position: absolute;
+                left: -12px;
+                top: 8px;
+                z-index: 100000;
+                background-repeat: no-repeat;
+                width: 43px;
+                height: 21px;
+                cursor: pointer;
+            }
+            .logo_head{
+                display: block;
+                background-image: url(https:///www.lgstatic.com/lg-www-fed/common/widgets/header_c/modules/img/sprite_361857f.png);
+                background-position: -76px -136px;
+                /* background-size: 150%; */
+                position: absolute;
+                right: 112px;
+                top: 10px;
+                z-index: 100000;
+                background-repeat: no-repeat;
+                width: 18px;
+                height: 18px;
+                cursor: pointer;
+            }
+            .loge_phone{
+                display: block;
+                background-image: url(https:///www.lgstatic.com/lg-www-fed/common/widgets/header_c/modules/img/sprite_361857f.png);
+                background-position: -64px -212px;
+                /* background-size: 150%; */
+                position: absolute;
+                right: 53px;
+                top: 10px;
+                z-index: 100000;
+                background-repeat: no-repeat;
+                width: 18px;
+                height: 18px;
+                cursor: pointer;
+            }
+            .logo_police{
+                display: block;
+                background-image: url(https://www.lgstatic.com/lg-www-fed/common/widgets/footer_c/modules/img/sprite_9dd5c92.png);
+                background-position: -150px -184px;
+                /* background-size: 150%; */
+                position: absolute;
+                left: 334px;
+                bottom: 36px;
+                z-index: 100000;
+                background-repeat: no-repeat;
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+            }
+            .logo_jubao{
+                display: block;
+                background-image: url(https://www.lgstatic.com/lg-www-fed/common/widgets/footer_c/modules/img/sprite_9dd5c92.png);
+                background-position: -132px -20px;
+                /* background-size: 150%; */
+                position: absolute;
+                left: 21px;
+                bottom: 17px;
+                z-index: 100000;
+                background-repeat: no-repeat;
+                width: 20px;
+                height: 24px;
+                /* cursor: pointer; */
+            }
+            .logo_lagou_icon{
+                display: block;
+                background-image: url(https://www.lgstatic.com/lg-www-fed/common/widgets/footer_c/modules/img/footer_lagou_icon_75f0ebc.png);
+                background-position: 0px -0px;
+                /* background-size: 150%; */
+                position: absolute;
+                right: 74.5px;
+                bottom: 35px;
+                z-index: 100000;
+                background-repeat: no-repeat;
+                width: 198px;
+                height: 19px;
+                /* cursor: pointer; */
+            }
+            .logo_wechat{
+                display: inline-block;
+                background-image: url(https://www.lgstatic.com/lg-www-fed/common/widgets/footer_c/modules/img/sprite_9dd5c92.png);
+                background-position: -114px -184px;
+                /* background-size: 150%; */
+                position: absolute;
+                left: -22px;
+                bottom: 4px;
+                z-index: 100000;
+                background-repeat: no-repeat;
+                width: 20px;
+                height: 24px;
+                cursor: pointer;
+            }
+            .inner_wrapper_left .wechat:hover .logo_wechat{
+                display: block;
+                background-image: url(https://www.lgstatic.com/lg-www-fed/common/widgets/footer_c/modules/img/sprite_9dd5c92.png);
+                background-position: -114px -220px;
+                /* background-size: 150%; */
+                position: absolute;
+                left: -22px;
+                bottom: 4px;
+                z-index: 100000;
+                background-repeat: no-repeat;
+                width: 20px;
+                height: 24px;
+                cursor: pointer;
+            }
+            .logo_weibo{
+                display: inline-block;
+                background-image: url(https://www.lgstatic.com/lg-www-fed/common/widgets/footer_c/modules/img/sprite_9dd5c92.png);
+                background-position: -214px -20px;
+                /* background-size: 150%; */
+                position: absolute;
+                left: -22px;
+                bottom: -7px;
+                z-index: 100000;
+                background-repeat: no-repeat;
+                width: 20px;
+                height: 24px;
+                cursor: pointer;
+            }
+            .inner_wrapper_left .weibo:hover .logo_weibo{
+                display: block;
+                background-image: url(https://www.lgstatic.com/lg-www-fed/common/widgets/footer_c/modules/img/sprite_9dd5c92.png);
+                background-position: -172px -20px;
+                /* background-size: 150%; */
+                position: absolute;
+                left: -22px;
+                bottom: -7px;
+                z-index: 100000;
+                background-repeat: no-repeat;
+                width: 20px;
+                height: 24px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="G:/swiper-5.1.0/swiper-5.1.0/package/js/swiper.min.js"></script>
+        <div class="father">
+            <a class="rocket" id = 'aaa'></a>
+            <div class="top_ads">
+                <img src="https://www.lgstatic.com/i/image2/M01/8B/96/CgotOV15t06AFmIDAAEvlS2kDFo969.JPG">
+            </div>
+            <div class="menu">
+                <div class="menu_son">
+                    <div class="menu_son_country">
+                        <a class="logo"></a>
+                        <span>全国站</span>
+                    </div>
+                    <ul>
+                        <li>首页</li>
+                        <li>公司</li>
+                        <li>校园招聘
+                            <span>new</span>
+                        </li>
+                        <li>言职</li>
+                        <li>课程</li>
+                    </ul>
+                    <div class="menu_son_passport"> 
+                        <a class="logo_head"></a>
+                        <p>登录</p>
+                        <p>注册</p>
+                    </div>
+                    <div class="menu_son_app">
+                        拉勾APP
+                        <a class="loge_phone"></a>
+                    </div>
+                    <div class="menu_son_firm">进入企业版</div>
+                </div>
+            </div>
+            <div class="login">
+                <img src="https://www.lgstatic.com/www/static/index/modules/un_login_banner/img/logo_41a2761.png"/>
+                <div class="login-son">
+                    <img src="https://www.lgstatic.com/www/static/index/modules/un_login_banner/img/text_ae1d842.png"/>
+                    <p>82894438家公司 | 6379998个职位，在拉勾等你</p>
+                </div>
+                <div class="login_verify">
+                    <div class="login_phone">
+                        <input type="text" name="phone_number" value placeholder="输入手机号" class="phone_number"/>
+                    </div>
+                    <div class="login_captcha">
+                        <input type="text" name="captcha" value placeholder="验证码" class="captcha"/>
+                    </div>
+                    <button type="submit" class="get_captcha">获取</button>
+                    <div class="login_register">
+                        <button>登录/注册</button>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <div class="search_about">
+                    <div>
+                        <input type="text" name="search" placeholder="搜索职位、职位、公司或地点" class="search_box">
+                        <a href="../ex3/ex3.html">
+                            <button class="search_button">
+                                搜索
+                            </button>
+                        </a>
+                    </div>
+                    <div class="search_popular">
+                        <span>热门搜索:</span>
+                        <ul>
+                            <li>校招早班车</li>
+                            <li>iOS</li>
+                            <li>Java面试</li>
+                            <li>架构设计</li>
+                            <li>C++</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="profession">
+                    <div class="profession_list">
+                        <div class="sort">
+                            <div class="sort_div">
+                                <span class="sort_span">技术</span>
+                                <ul>
+                                    <li>Java</li>
+                                    <li>PHP</li>
+                                    <li>C++</li>
+                                    <li>区块链</li>
+                                </ul>
+                                <span class="span_sign">></span>
+                            </div>
+                            <div class="sort_hide">
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">后端开发</span>
+                                    <ul>
+                                        <li>Java</li>
+                                        <li>C++</li>
+                                        <li>PHP</li>
+                                        <li>数据挖掘</li>
+                                        <li>搜索算法</li>
+                                        <li>精准推荐</li>
+                                        <li>C</li>
+                                        <li>C#</li>
+                                        <li>全栈工程师</li>
+                                        <li>.NET</li>
+                                        <li>Hadoop</li>
+                                        <li>Python</li>
+                                        <li>Delphi</li>
+                                        <li>VB</li>
+                                        <li>Perl</li>
+                                        <li>Ruby</li>
+                                        <li>Node.js</li>
+                                        <li>Go</li>
+                                        <li>Asp</li>
+                                        <li>Shell</li>
+                                        <li>区块链</li>
+                                        <li>后端开发其他</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">移动开发</span>
+                                    <ul>
+                                        <li>HTML5</li>
+                                        <li>Android</li>
+                                        <li>iOS</li>
+                                        <li>WP</li>
+                                        <li>移动开发其他</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">前端开发</span>
+                                    <ul>
+                                        <li>web前端</li>
+                                        <li>Flash</li>
+                                        <li>html5</li>
+                                        <li>JavaScript</li>
+                                        <li>U3D</li>
+                                        <li>COCOS2D-X</li>
+                                        <li>前端开发其他</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">人工智能</span>
+                                    <ul>
+                                        <li>深度学习</li>
+                                        <li>机器学习</li>
+                                        <li>图像处理</li>
+                                        <li>图像识别</li>
+                                        <li>语音识别</li>
+                                        <li>机器视觉</li>
+                                        <li>算法工程师</li>
+                                        <li>自然语言处理</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">测试</span>
+                                    <ul>
+                                        <li>测试工程师</li>
+                                        <li>自动化测试</li>
+                                        <li>功能测试</li>
+                                        <li>性能测试</li>
+                                        <li>测试开发</li>
+                                        <li>游戏测试</li>
+                                        <li>白盒测试</li>
+                                        <li>灰盒测试</li>
+                                        <li>黑盒测试</li>
+                                        <li>手机测试</li>
+                                        <li>硬件测试</li>
+                                        <li>测试经理</li>
+                                        <li>测试其它</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">运维</span>
+                                    <ul>
+                                        <li>运维工程师</li>
+                                        <li> 运维开发工程师</li>
+                                        <li>网络工程师</li>
+                                        <li>系统工程师</li>
+                                        <li>IT支持</li>
+                                        <li>IDC</li>
+                                        <li>CDN</li>
+                                        <li>系统管理员</li>
+                                        <li>病毒分析</li>
+                                        <li>WEB安全</li>
+                                        <li>网络安全</li>
+                                        <li>系统安全</li>
+                                        <li>运维经理</li>
+                                        <li>运维其它</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">DBA</span>
+                                    <ul>
+                                        <li>MySQL</li>
+                                        <li>SQLSeverver</li>
+                                        <li>Oracle</li>
+                                        <li>DB2</li>
+                                        <li>MongoDB</li>
+                                        <li>ETL</li>
+                                        <li>Hive</li>
+                                        <li>数据仓库</li>
+                                        <li>DBA其它</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">高端职位</span>
+                                    <ul>
+                                        <li>技术经理</li>
+                                        <li>技术总监</li>
+                                        <li>架构师</li>
+                                        <li>CTO</li>
+                                        <li>运维总监</li>
+                                        <li>技术合伙人</li>
+                                        <li>项目总监</li>
+                                        <li>测试总监</li>
+                                        <li>安全专家</li>
+                                        <li>高端技术职位其它</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">项目管理</span>
+                                    <ul>
+                                        <li>项目经理</li>
+                                        <li>项目助理</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">硬件开发</span>
+                                    <ul>
+                                        <li>硬件</li>
+                                        <li>嵌入式</li>
+                                        <li>自动化</li>
+                                        <li>单片机</li>
+                                        <li>电路设计</li>
+                                        <li>驱动开发</li>
+                                        <li>系统集成</li>
+                                        <li>FPGA开发</li>
+                                        <li>DSP开发</li>
+                                        <li>ARM开发</li>
+                                        <li>PCB工艺</li>
+                                        <li>模具设计</li>
+                                        <li>热传导</li>
+                                        <li>材料工程师</li>
+                                        <li>精益工程师</li>
+                                        <li>射频工程师</li>
+                                        <li>硬件开发其它</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">企业软件</span>
+                                    <ul>
+                                        <li>实施工程师</li>
+                                        <li>售前工程师</li>
+                                        <li>售后工程师</li>
+                                        <li>BI工程师</li>
+                                        <li>企业软件其它</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sort">
+                            <div class="sort_div">
+                                <span class="sort_span">产品</span>
+                                <ul>
+                                    <li>产品总监</li>
+                                    <li>产品经理</li>
+                                </ul>
+                                <span class="span_sign">></span>
+                            </div>
+                            <div class="sort_hide">
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">产品经理</span>
+                                    <ul>
+                                        <li>产品经理</li>
+                                        <li>网页产品经理</li>
+                                        <li>移动产品经理</li>
+                                        <li>产品助理</li>
+                                        <li>数据产品经理</li>
+                                        <li>电商产品经理</li>
+                                        <li>游戏策划</li>
+                                        <li>产品实习生</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">产品设计师</span>
+                                    <ul>
+                                        <li>网页产品设计师</li>
+                                        <li>无线产品设计师</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                        <span class="sort_hide_span">高端职位</span>
+                                        <ul>
+                                            <li>产品部经理</li>
+                                            <li>产品总监</li>
+                                            <li>游戏制作人</li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="sort">
+                            <div class="sort_div">
+                                <span class="sort_span">设计</span>
+                                <ul>
+                                    <li>UI设计师</li>
+                                    <li>交互设计</li>
+                                    <li>网页设计师</li>
+                                </ul>
+                                <span class="span_sign">></span></div>
+                            <div class="sort_hide">
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">视觉设计</span>
+                                    <ul>
+                                        <li>视觉设计师</li>
+                                        <li>网页设计师</li>
+                                        <li>Flash设计师</li>
+                                        <li>APP设计师</li>
+                                        <li>UI设计师</li>
+                                        <li>平面设计师</li>
+                                        <li>美术设计师（2D/3D）</li>
+                                        <li>广告设计师</li>
+                                        <li>多媒体设计师</li>
+                                        <li>原画师</li>
+                                        <li>游戏特效</li>
+                                        <li>游戏界面设计师</li>
+                                        <li>游戏场景</li>
+                                        <li>游戏角色</li>
+                                        <li>游戏动作</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">交互设计</span>
+                                    <ul>
+                                        <li>交互设计师</li>
+                                        <li>无线交互设计师</li>
+                                        <li>网页交互设计师</li>
+                                        <li>硬件交互设计师</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">用户研究</span>
+                                    <ul>
+                                        <li>数据分析师</li>
+                                        <li>用户研究员</li>
+                                        <li>游戏数值策划</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">高端职位</span>
+                                    <ul>
+                                        <li>设计经理/主管</li>
+                                        <li>设计总监</li>
+                                        <li>视觉设计经理/主管</li>
+                                        <li>视觉设计总监</li>
+                                        <li>交互设计经理/主管</li>
+                                        <li>交互设计总监</li>
+                                        <li>用户研究经理/主管</li>
+                                        <li>用户研究总监</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sort">
+                            <div class="sort_div">
+                                <span class="sort_span">运营</span>
+                                <ul>
+                                    <li>新媒体运营</li>
+                                    <li>编辑</li>
+                                    <li>数据运营</li>
+                                </ul>
+                                <span class="span_sign">></span></div>
+                            <div class="sort_hide">
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">运营</span>
+                                    <ul>
+                                        <li>用户运营</li>
+                                        <li>产品运营</li>
+                                        <li>数据运营</li>
+                                        <li>内容运营</li>
+                                        <li>活动运营</li>
+                                        <li>商家运营</li>
+                                        <li>平类运营</li>
+                                        <li>游戏运营</li>
+                                        <li>网络推广</li>
+                                        <li>运营专员</li>
+                                        <li>网店运营</li>
+                                        <li>新媒体运营</li>
+                                        <li>海外运营</li>
+                                        <li>运营经理</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">编辑</span>
+                                    <ul>
+                                        <li>副主编</li>
+                                        <li>内容编辑</li>
+                                        <li>文案策划</li>
+                                        <li>记者</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">客服</span>
+                                    <ul>
+                                        <li>售前咨询</li>
+                                        <li>售后客服</li>
+                                        <li>淘宝客服</li>
+                                        <li>客服经理</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">高端职位</span>
+                                    <ul>
+                                        <li>主编</li>
+                                        <li>运营总监</li>
+                                        <li>COO</li>
+                                        <li>客服总监</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sort">
+                            <div class="sort_div">
+                                <span class="sort_span">市场</span>
+                                <ul>
+                                    <li>市场营销</li>
+                                    <li>市场推广</li>
+                                    <li>市场策划</li>
+                                </ul>
+                                <span class="span_sign">></span>
+                            </div>
+                            <div class="sort_hide">
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">市场/营销</span>
+                                    <ul>
+                                        <li>市场营销</li>
+                                        <li>市场策划</li>
+                                        <li>市场顾问</li>
+                                        <li>商务渠道</li>
+                                        <li>商务数据分析</li>
+                                        <li>活动策划</li>
+                                        <li>网络营销</li>
+                                        <li>海外市场</li>
+                                        <li>商务专员</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">媒介/公关</span>
+                                    <ul>
+                                        <li>政府关系</li>
+                                        <li>品牌公关</li>
+                                        <li>广告协调</li>
+                                        <li>媒介投放</li>
+                                        <li>媒介合作</li>
+                                        <li>媒介顾问</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">品牌/广告</span>
+                                    <ul>
+                                        <li>广告创意</li>
+                                        <li>广告制作</li>
+                                        <li>广告文案</li>
+                                        <li>广告投放</li>
+                                        <li>广告定价</li>
+                                        <li>广告专员</li>
+                                        <li>品牌合作</li>
+                                        <li>品牌策划</li>
+                                        <li>品牌专员</li>
+                                        <li>美术指导</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">渠道/推广</span>
+                                    <ul>
+                                        <li>市场推广</li>
+                                        <li>渠道推广</li>
+                                        <li>SEO</li>
+                                        <li>SEM</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">高端职位</span>
+                                    <ul>
+                                        <li>策划经理</li>
+                                        <li>媒介经理</li>
+                                        <li>市场总监</li>
+                                        <li>公关总监</li>
+                                        <li>媒介总监</li>
+                                        <li>创意总监</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sort">
+                            <div class="sort_div">
+                                <span class="sort_span">销售</span>
+                                <ul>
+                                    <li>销售专员</li>
+                                    <li>销售经理</li>
+                                    <li>销售总监</li>
+                                </ul>
+                                <span class="span_sign">></span></div>
+                            <div class="sort_hide">
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">销售</span>
+                                    <ul>
+                                        <li>销售专员</li>
+                                        <li>销售顾问</li>
+                                        <li>客户代表</li>
+                                        <li>大客户代表</li>
+                                        <li>客户经理</li>
+                                        <li>商户拓展</li>
+                                        <li>渠道销售</li>
+                                        <li>代理商销售</li>
+                                        <li>电话销售</li>
+                                        <li>广告销售</li>
+                                        <li>信用卡销售</li>
+                                        <li>保险销售</li>
+                                        <li>销售工程师</li>
+                                        <li>商务渠道</li>
+                                        <li>其它销售</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">销售管理</span>
+                                    <ul>
+                                        <li>销售总监</li>
+                                        <li>商务总监</li>
+                                        <li>区域总监</li>
+                                        <li>城市经理</li>
+                                        <li>团队经理</li>
+                                        <li>销售VIP</li>
+                                        <li>商务主管</li>
+                                        <li>其他销售管理职位</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sort">
+                            <div class="sort_div">
+                                <span class="sort_span">职能</span>
+                                <ul>
+                                    <li>HR</li>
+                                    <li>行政</li>
+                                    <li>财务</li>
+                                    <li>审计</li>
+                                </ul>
+                                <span class="span_sign">></span></div>
+                            <div class="sort_hide">
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">人力资源</span>
+                                    <ul>
+                                        <li>人力资源</li>
+                                        <li>招聘</li>
+                                        <li>HRBP</li>
+                                        <li>人事/HR</li>
+                                        <li>培训经理</li>
+                                        <li>薪资福利经理</li>
+                                        <li>绩效考核经理</li>
+                                        <li>员工关系</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">行政</span>
+                                    <ul>
+                                        <li>助理</li>
+                                        <li>前台</li>
+                                        <li>行政</li>
+                                        <li>总助</li>
+                                        <li>文秘</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">财务</span>
+                                    <ul>
+                                        <li>会计</li>
+                                        <li>出纳</li>
+                                        <li>财务</li>
+                                        <li>结算</li>
+                                        <li>税务</li>
+                                        <li>审计</li>
+                                        <li>风控</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">法务</span>
+                                    <ul>
+                                        <li>法务</li>
+                                        <li>律师</li>
+                                        <li>专利</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">高端职位</span>
+                                    <ul>
+                                        <li>行政总监/经理</li>
+                                        <li>财务总监/经理</li>
+                                        <li>HRD/HRM</li>
+                                        <li>CFO</li>
+                                        <li>CEO</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sort">
+                            <div class="sort_div">
+                                <span class="sort_span">游戏</span>
+                                <ul>
+                                    <li>小游戏开发</li>
+                                    <li>U3D</li>
+                                    <li>游戏策划</li>
+                                </ul>
+                                <span class="span_sign">></span></div>
+                            <div class="sort_hide">
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">技术开发</span>
+                                    <ul>
+                                        <li>H5游戏开发</li>
+                                        <li>小游戏开发</li>
+                                        <li>游戏后端开发</li>
+                                        <li>C++游戏开发</li>
+                                        <li>FLASH</li>
+                                        <li>COCOS2D-X</li>
+                                        <li>U3D</li>
+                                        <li>游戏测试</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">产品策划</span>
+                                    <ul>
+                                        <li>游戏制作人</li>
+                                        <li>游戏产品经理</li>
+                                        <li>游戏项目经理</li>
+                                        <li>游戏策划</li>
+                                        <li>剧情设计</li>
+                                        <li>游戏文案</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">设计</span>
+                                    <ul>
+                                        <li>游戏动画</li>
+                                        <li>游戏原画</li>
+                                        <li>游戏界面</li>
+                                        <li>游戏场景</li>
+                                        <li>游戏角色</li>
+                                        <li>游戏动作</li>
+                                        <li>游戏动效</li>
+                                        <li>游戏美工</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">运营/推广</span>
+                                    <ul>
+                                        <li>游戏运营</li>
+                                        <li>游戏编辑</li>
+                                        <li>游戏推广</li>
+                                        <li>手游推广</li>
+                                        <li>页游推广</li>
+                                    </ul>
+                                </div>
+                                <div class="sort_hide_content">
+                                    <span class="sort_hide_span">其他</span>
+                                    <ul>
+                                        <li>游戏主播</li>
+                                        <li>游戏陪练</li>
+                                        <li>游戏体验</li>
+                                        <li>电竞主持</li>
+                                        <li>电竞讲师</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profession_img">
+                       <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://www.lgstatic.com/i/image2/M01/A0/A7/CgoB5l22toeASkMmAAILklZ7zJc229.JPG" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://www.lgstatic.com/i/image2/M01/9E/F3/CgoB5l2xP36AKJepAAGPoT6pGK0699.JPG" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://www.lgstatic.com/i/image2/M01/A0/A7/CgoB5l22toeASkMmAAILklZ7zJc229.JPG" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://www.lgstatic.com/i/image2/M01/9E/F3/CgoB5l2xP36AKJepAAGPoT6pGK0699.JPG" />
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                       </div>
+                    </div>
+                </div>
+                <div class="main_jobs">
+                    <div class="separate_line">
+                        <ul class="separate_line_ul">
+                            <li class="separate_line_ul_li">24Hour热门</li>
+                            <div></div>
+                            <li class="main_sort_latest">最新职位</li>
+                        </ul>
+                    </div>
+                    <div class="main_popular_jobs">
+                        <ul class="main_popular_jobs_ul">
+                            <li class="main_popular_jobs_li">
+                                <div class="main_popular_jobs_card jobs_card_icon">
+                                    <div class="main_popular_jobs_summary">
+                                        <div class="main_popular_jobs_summary_jobsname">
+                                        <p>测试工程师</p>
+                                        <span class="send_time">[17:05发布]
+                                            <div class="jobs_card_chatme">
+                                                <div class="jobs_card_chatme_card1">
+                                                    <span class="jobs_card_chatme_card1_triangle"></span>
+                                                    <div class="jobs_card_chatme_card1_left">
+                                                        <img src="https://www.lgstatic.com/i/image2/M01/8A/D7/CgotOV14ke6AKH-xAALKIWlX3Q0704.png">
+                                                        <div class="hr_info">
+                                                            <div class="hr_name">
+                                                                马洋露
+                                                            </div>
+                                                            <div class="hr_position">
+                                                                人事专员
+                                                            </div>
+                                                        </div>
+                                                        <div class="tips_texts">
+                                                            Hi，对我发布的职位感兴趣？用拉勾APP扫码，直接和我聊聊吧！
+                                                        </div>
+                                                    </div>
+                                                    <div class="jobs_card_chatme_card1_right">
+                                                        <img src="https://res.wx.qq.com/a/wx_fed/weixin_portal/res/static/img/2cPoBPC.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                        <span class="jobs_salary">10k-15k</span>
+                                        </div>
+                                        <div class="main_popular_jobs_summary_limit">
+                                            经验应届毕业生 / 本科
+                                        </div>
+                                        <div class="main_popular_jobs_summary_label">
+                                            <span class="label_word">移动互联网</span>
+                                            <span class="label_word">工具软件</span>
+                                            <span class="label_word">测试</span>
+                                        </div>
+                                    </div>
+                                    <span class="jobs_card_icon_span"></span>
+                                    <div class="main_popular_jobs_firm">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_100x100/i/image2/M01/90/CE/CgotOV2IK22AKZQVAAA-SfVp0uE669.png"></a>
+                                        <div>
+                                            <a href="#">Versa</a>
+                                            <span>移动互联网,文娱丨内容 / A轮 / 上海</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="main_popular_jobs_li">
+                                <div class="main_popular_jobs_card">
+                                    <div class="main_popular_jobs_summary">
+                                        <div class="main_popular_jobs_summary_jobsname">
+                                        <p>产品经理 </p>
+                                        <span class="send_time">[17:04发布]
+                                            <div class="jobs_card_chatme">
+                                                <div class="jobs_card_chatme_card1">
+                                                    <span class="jobs_card_chatme_card1_triangle"></span>
+                                                    <div class="jobs_card_chatme_card1_left">
+                                                        <img src="https://www.lgstatic.com/i/image2/M01/25/CE/CgoB5lzGtCuAOzZ5AAK5HG3xKVc176.png">
+                                                        <div class="hr_info">
+                                                            <div class="hr_name">
+                                                                赵絁琳
+                                                            </div>
+                                                            <div class="hr_position">
+                                                                人事
+                                                            </div>
+                                                        </div>
+                                                        <div class="tips_texts">
+                                                            Hi，对我发布的职位感兴趣？用拉勾APP扫码，直接和我聊聊吧！
+                                                        </div>
+                                                    </div>
+                                                    <div class="jobs_card_chatme_card1_right">
+                                                        <img src="https://res.wx.qq.com/a/wx_fed/weixin_portal/res/static/img/2cPoBPC.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                        <span class="jobs_salary">15k-20k</span>
+                                        </div>
+                                        <div class="main_popular_jobs_summary_limit">
+                                            经验3-5年 / 大专
+                                        </div>
+                                        <div class="main_popular_jobs_summary_label">
+                                            <span class="label_word">教育</span>
+                                            <span class="label_word">产品设计</span>
+                                            <span class="label_word">产品策划</span>
+                                        </div>
+                                    </div>
+                                    <div class="main_popular_jobs_firm">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_100x100/i/image2/M01/58/E9/CgotOV0dpSKADO1uAABop9eDGf8156.jpg"></a>
+                                        <div>
+                                            <a href="#">赛银科技园</a>
+                                            <span>人工智能,房产家居 / 不需要融资 / 杭州</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="main_popular_jobs_li">
+                                <div class="main_popular_jobs_card">
+                                    <div class="main_popular_jobs_summary">
+                                        <div class="main_popular_jobs_summary_jobsname">
+                                        <p>美工</p>
+                                        <span class="send_time">[17:04发布]
+                                            <div class="jobs_card_chatme">
+                                                <div class="jobs_card_chatme_card2">
+                                                    <span class="jobs_card_chatme_card2_triangle"></span>
+                                                    <div class="jobs_card_chatme_card2_left">
+                                                        <img src="https://www.lgstatic.com/i/image2/M01/F3/B4/CgotOVyAyqGAPxe1AAECGWqLLXc043.jpg">
+                                                        <div class="hr_info">
+                                                            <div class="hr_name">
+                                                                聂金凤
+                                                            </div>
+                                                            <div class="hr_position">
+                                                                招聘经理
+                                                            </div>
+                                                        </div>
+                                                        <div class="tips_texts">
+                                                            Hi，对我发布的职位感兴趣？用拉勾APP扫码，直接和我聊聊吧！
+                                                        </div>
+                                                    </div>
+                                                    <div class="jobs_card_chatme_card2_right">
+                                                        <img src="https://res.wx.qq.com/a/wx_fed/weixin_portal/res/static/img/2cPoBPC.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                        <span class="jobs_salary">6k-10k</span>
+                                        </div>
+                                        <div class="main_popular_jobs_summary_limit">
+                                            经验3-5年 大专
+                                        </div>
+                                        <div class="main_popular_jobs_summary_label">
+                                            <span class="label_word">电商</span>
+                                            <span class="label_word">新零售</span>
+                                            <span class="label_word">电商美工</span>
+                                        </div>
+                                    </div>
+                                    <span class="jobs_card_icon_span"></span>
+                                    <div class="main_popular_jobs_firm">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_100x100/i/image2/M01/76/8A/CgotOV1TpEmAZqybAACO8GLeLyw534.jpg"></a>
+                                        <div>
+                                            <a href="#">梵大集团</a>
+                                            <span>移动互联网,其他 / 不需要融资 / 广州</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="main_popular_jobs_ul">
+                            <li class="main_popular_jobs_li">
+                                <div class="main_popular_jobs_card">
+                                    <div class="main_popular_jobs_summary">
+                                        <div class="main_popular_jobs_summary_jobsname">
+                                        <p>数据产品经理</p>
+                                        <span class="send_time">[17:04发布]
+                                            <div class="jobs_card_chatme">
+                                                <div class="jobs_card_chatme_card1">
+                                                    <span class="jobs_card_chatme_card1_triangle"></span>
+                                                    <div class="jobs_card_chatme_card1_left">
+                                                        <img src="https://www.lgstatic.com/i/image2/M01/69/62/CgoB5l05ZyKAarWeAAA7sC-I5ug952.png">
+                                                        <div class="hr_info">
+                                                            <div class="hr_name">
+                                                                Tiffany
+                                                            </div>
+                                                            <div class="hr_position">
+                                                                人事专员
+                                                            </div>
+                                                        </div>
+                                                        <div class="tips_texts">
+                                                            Hi，对我发布的职位感兴趣？用拉勾APP扫码，直接和我聊聊吧！
+                                                        </div>
+                                                    </div>
+                                                    <div class="jobs_card_chatme_card1_right">
+                                                        <img src="https://res.wx.qq.com/a/wx_fed/weixin_portal/res/static/img/2cPoBPC.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                        <span class="jobs_salary">18k-25k</span>
+                                        </div>
+                                        <div class="main_popular_jobs_summary_limit">
+                                            经验3-5年 本科
+                                        </div>
+                                        <div class="main_popular_jobs_summary_label">
+                                            <span class="label_word">数据分析</span>
+                                        </div>
+                                    </div>
+                                    <div class="main_popular_jobs_firm">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_100x100/i/image/M00/2C/F2/CgpEMlkn1tOADsAoAAAeNo4Pumk661.png"></a>
+                                        <div>
+                                            <a href="#">金柚网</a>
+                                            <span>移动互联网,企业服务 B轮 杭州</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="main_popular_jobs_li">
+                                <div class="main_popular_jobs_card">
+                                    <div class="main_popular_jobs_summary">
+                                        <div class="main_popular_jobs_summary_jobsname">
+                                        <p>销售经理(教育软件)</p>
+                                        <span class="send_time">[17:04发布]
+                                            <div class="jobs_card_chatme">
+                                                <div class="jobs_card_chatme_card1">
+                                                    <span class="jobs_card_chatme_card1_triangle"></span>
+                                                    <div class="jobs_card_chatme_card1_left">
+                                                        <img src="https://www.lgstatic.com/i/image2/M01/4D/70/CgoB5l0MM2WATXEMAAEQXfjHicI061.jpg">
+                                                        <div class="hr_info">
+                                                            <div class="hr_name">
+                                                                邓碧芯
+                                                            </div>
+                                                            <div class="hr_position">
+                                                                招聘负责人
+                                                            </div>
+                                                        </div>
+                                                        <div class="tips_texts">
+                                                            Hi，对我发布的职位感兴趣？用拉勾APP扫码，直接和我聊聊吧！
+                                                        </div>
+                                                    </div>
+                                                    <div class="jobs_card_chatme_card1_right">
+                                                        <img src="https://res.wx.qq.com/a/wx_fed/weixin_portal/res/static/img/2cPoBPC.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                        <span class="jobs_salary">7k-12k</span>
+                                        </div>
+                                        <div class="main_popular_jobs_summary_limit">
+                                                经验3-5年 / 大专
+                                        </div>
+                                        <div class="main_popular_jobs_summary_label">
+                                            <span class="label_word">移动互联网</span>
+                                            <span class="label_word">教育</span>
+                                        </div>
+                                    </div>
+                                    <div class="main_popular_jobs_firm">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_100x100/i/image2/M01/8A/C0/CgotOVuWVcqAa56DAAHAu9MQZiE632.jpg"></a>
+                                        <div>
+                                            <a href="#">华智电子</a>
+                                            <span>硬件,人工智能 / 未融资 / 广州</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="main_popular_jobs_li">
+                                <div class="main_popular_jobs_card">
+                                    <div class="main_popular_jobs_summary">
+                                        <div class="main_popular_jobs_summary_jobsname">
+                                        <p>新媒体运营专员</p>
+                                        <span class="send_time">[17:04发布]
+                                            <div class="jobs_card_chatme">
+                                                <div class="jobs_card_chatme_card2">
+                                                    <span class="jobs_card_chatme_card2_triangle"></span>
+                                                    <div class="jobs_card_chatme_card2_left">
+                                                        <img src="https://www.lgstatic.com/i/image2/M01/92/C5/CgotOV2LfRGALqtcAAR7zGd38bY689.png">
+                                                        <div class="hr_info">
+                                                            <div class="hr_name">
+                                                                王琳
+                                                            </div>
+                                                            <div class="hr_position">
+                                                                人事专员
+                                                            </div>
+                                                        </div>
+                                                        <div class="tips_texts">
+                                                            Hi，对我发布的职位感兴趣？用拉勾APP扫码，直接和我聊聊吧！
+                                                        </div>
+                                                    </div>
+                                                    <div class="jobs_card_chatme_card2_right">
+                                                        <img src="https://res.wx.qq.com/a/wx_fed/weixin_portal/res/static/img/2cPoBPC.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                        <span class="jobs_salary">6k-10k</span>
+                                        </div>
+                                        <div class="main_popular_jobs_summary_limit">
+                                                经验1-3年 / 大专
+                                        </div>
+                                        <div class="main_popular_jobs_summary_label">
+                                            <span class="label_word">运营</span>
+                                        </div>
+                                    </div>
+                                    <div class="main_popular_jobs_firm">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_100x100/i/image3/M00/1A/A7/Cgq2xlp6eH6AD8_1AACoOLXqV8M117.jpg"></a>
+                                        <div>
+                                            <a href="#">津晶科技</a>
+                                            <span>移动互联网,金融 / 不需要融资 / 广州</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="main_popular_jobs_ul">
+                            <li class="main_popular_jobs_li">
+                                <div class="main_popular_jobs_card">
+                                    <div class="main_popular_jobs_summary">
+                                        <div class="main_popular_jobs_summary_jobsname">
+                                        <p>广告商务经理(公众号方向)</p>
+                                        <span class="send_time">[17:04发布]
+                                            <div class="jobs_card_chatme">
+                                                <div class="jobs_card_chatme_card1">
+                                                    <span class="jobs_card_chatme_card1_triangle"></span>
+                                                    <div class="jobs_card_chatme_card1_left">
+                                                        <img src="https://www.lgstatic.com/i/image2/M01/F0/AA/CgotOVx-L7uAc2MwAAOuPSu2e10971.jpg">
+                                                        <div class="hr_info">
+                                                            <div class="hr_name">
+                                                                杨小姐
+                                                            </div>
+                                                            <div class="hr_position">
+                                                                人事专员
+                                                            </div>
+                                                        </div>
+                                                        <div class="tips_texts">
+                                                            Hi，对我发布的职位感兴趣？用拉勾APP扫码，直接和我聊聊吧！
+                                                        </div>
+                                                    </div>
+                                                    <div class="jobs_card_chatme_card1_right">
+                                                        <img src="https://res.wx.qq.com/a/wx_fed/weixin_portal/res/static/img/2cPoBPC.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                        <span class="jobs_salary">8k-15k</span>
+                                        </div>
+                                        <div class="main_popular_jobs_summary_limit">
+                                            经验1-3年 大专
+                                        </div>
+                                        <div class="main_popular_jobs_summary_label">
+                                            <span class="label_word">移动互联网</span>
+                                            <span class="label_word">广告销售</span>
+                                            <span class="label_word">市场拓展</span>
+                                        </div>
+                                    </div>
+                                    <div class="main_popular_jobs_firm">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_100x100/i/image2/M01/18/A5/CgotOVyv93yAHNWwAAAkjiOcqC4614.png"></a>
+                                        <div>
+                                            <a href="#">广州杨盛</a>
+                                            <span>移动互联网,数据服务 / 未融资 / 广州</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="main_popular_jobs_li">
+                                <div class="main_popular_jobs_card">
+                                    <div class="main_popular_jobs_summary">
+                                        <div class="main_popular_jobs_summary_jobsname">
+                                        <p>AI产品经理 </p>
+                                        <span class="send_time">[17:04发布]
+                                            <div class="jobs_card_chatme">
+                                                <div class="jobs_card_chatme_card1">
+                                                    <span class="jobs_card_chatme_card1_triangle"></span>
+                                                    <div class="jobs_card_chatme_card1_left">
+                                                        <img src="https://www.lgstatic.com/i/image2/M01/66/E8/CgotOV01gdyAItdpAABDNTI3kS4786.png">
+                                                        <div class="hr_info">
+                                                            <div class="hr_name">
+                                                                欧茗美
+                                                            </div>
+                                                            <div class="hr_position">
+                                                                HRBP
+                                                            </div>
+                                                        </div>
+                                                        <div class="tips_texts">
+                                                            Hi，对我发布的职位感兴趣？用拉勾APP扫码，直接和我聊聊吧！
+                                                        </div>
+                                                    </div>
+                                                    <div class="jobs_card_chatme_card1_right">
+                                                        <img src="https://res.wx.qq.com/a/wx_fed/weixin_portal/res/static/img/2cPoBPC.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                        <span class="jobs_salary">15k-25k</span>
+                                        </div>
+                                        <div class="main_popular_jobs_summary_limit">
+                                            经验3-5年 / 本科
+                                        </div>
+                                        <div class="main_popular_jobs_summary_label">
+                                            <span class="label_word">推荐</span>
+                                            <span class="label_word">教育</span>
+                                            <span class="label_word">产品设计</span>
+                                        </div>
+                                    </div>
+                                    <div class="main_popular_jobs_firm">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_100x100/i/image/M00/7D/56/CgqKkVhHknKAFZU_AACiNZj9xGI162.jpg"></a>
+                                        <div>
+                                            <a href="#">布本智能</a>
+                                            <span>数据服务 / A轮 / 北京</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="main_popular_jobs_li">
+                                <div class="main_popular_jobs_card">
+                                    <div class="main_popular_jobs_summary">
+                                        <div class="main_popular_jobs_summary_jobsname">
+                                        <p>客户端C/C++ 工程师 </p>
+                                        <span class="send_time">[17:04发布]
+                                            <div class="jobs_card_chatme">
+                                                <div class="jobs_card_chatme_card2">
+                                                    <span class="jobs_card_chatme_card2_triangle"></span>
+                                                    <div class="jobs_card_chatme_card2_left">
+                                                        <img src="https://www.lgstatic.com/i/image2/M01/02/A0/CgotOVyRrEqAAO51AAED09dNVlw530.jpg">
+                                                        <div class="hr_info">
+                                                            <div class="hr_name">
+                                                                高
+                                                            </div>
+                                                            <div class="hr_position">
+                                                                人事
+                                                            </div>
+                                                        </div>
+                                                        <div class="tips_texts">
+                                                            Hi，对我发布的职位感兴趣？用拉勾APP扫码，直接和我聊聊吧！
+                                                        </div>
+                                                    </div>
+                                                    <div class="jobs_card_chatme_card2_right">
+                                                        <img src="https://res.wx.qq.com/a/wx_fed/weixin_portal/res/static/img/2cPoBPC.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                        <span class="jobs_salary">20k-40k</span>
+                                        </div>
+                                        <div class="main_popular_jobs_summary_limit">
+                                            经验3-5年 / 本科
+                                        </div>
+                                        <div class="main_popular_jobs_summary_label">
+                                            <span class="label_word">C</span>
+                                            <span class="label_word">C++</span>
+                                            <span class="label_word">Linux/Unix</span>
+                                        </div>
+                                    </div>
+                                    <div class="main_popular_jobs_firm">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_100x100/image1/M00/1C/CD/Cgo8PFUnRoaABHOIAACAkPVErk8851.png"></a>
+                                        <div>
+                                            <a href="#">青藤云安全</a>
+                                            <span>数据服务 / B轮 / 北京</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="see_more">
+                    查看更多
+                </a>
+                <br><br><br>
+                <div class="separate_line">
+                    <ul class="separate_line_ul">
+                        <li class="separate_line_ul_li">互联网热门公司</li>
+                        <div></div>
+                    </ul>
+                </div>
+                <div class="popular_firm">
+                    <ul class="popular_firm_ul">
+                        <li class="popular_firm_li">
+                            <div class="popular_firm_card">
+                                <div class="popular_firm_summary">
+                                    <div class="popular_firm_summary_firmimg">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_160x160/i/image/M00/00/8C/CgqKkVZNdJ-ANh18AAChEneytgQ419.jpg"></a>
+                                    </div>
+                                    <p>辰岚广告</p>
+                                    <div class="popular_firm_summary_limit">
+                                            广告营销,企业服务 / 不需要融资
+                                    </div>
+                                    <span>年轻、朝气、愉悦的氛围。</span>
+                                </div>
+                                <div class="popular_firm_date">
+                                    <div>
+                                        <p class="popular_firm_date_number">18</p>
+                                        <p class="popular_firm_date_sort">面试评价</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <p class="popular_firm_date_number">24</p>
+                                        <p class="popular_firm_date_sort">在招职位</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <p class="popular_firm_date_number">78%</p>
+                                        <p class="popular_firm_date_sort">简历处理率</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular_firm_li">
+                            <div class="popular_firm_card">
+                                <div class="popular_firm_summary">
+                                    <div class="popular_firm_summary_firmimg">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_160x160/i/image2/M00/17/C2/CgoB5ln5lUuAM8oSAADO2Rz54hQ336.png"></a>
+                                    </div>
+                                    <p>袋鼠云</p>
+                                    <div class="popular_firm_summary_limit">
+                                        数据服务 / A轮
+                                    </div>
+                                    <span>由多名中国数据智能领域资深专家创立...</span>
+                                </div>
+                                <div class="popular_firm_date">
+                                    <div>
+                                        <p class="popular_firm_date_number">7</p>
+                                        <p class="popular_firm_date_sort">面试评价</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <p class="popular_firm_date_number">48</p>
+                                        <p class="popular_firm_date_sort">在招职位</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <p class="popular_firm_date_number">100%</p>
+                                        <p class="popular_firm_date_sort">简历处理率</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular_firm_li">
+                            <div class="popular_firm_card">
+                                <div class="popular_firm_summary">
+                                    <div class="popular_firm_summary_firmimg">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_160x160/i/image/M00/07/D2/CgqKkVbOwmWAeDpuAAAo1fO92a4492.jpg"></a>
+                                    </div>
+                                    <p>骆驼电商</p>
+                                    <div class="popular_firm_summary_limit">
+                                            电商,消费生活 / 上市公司
+                                    </div>
+                                    <span>选择我们，选择更广阔的发展空间</span>
+                                </div>
+                                <div class="popular_firm_date">
+                                    <div>
+                                        <p class="popular_firm_date_number">29</p>
+                                        <p class="popular_firm_date_sort">面试评价</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <p class="popular_firm_date_number">5</p>
+                                        <p class="popular_firm_date_sort">在招职位</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <p class="popular_firm_date_number">52%</p>
+                                        <p class="popular_firm_date_sort">简历处理率</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular_firm_li">
+                            <div class="popular_firm_card">
+                                <div class="popular_firm_summary">
+                                    <div class="popular_firm_summary_firmimg">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_160x160/i/image2/M01/B4/A1/CgoB5lwHi-2ADLSxAACEBWVZGpw497.png"></a>
+                                    </div>
+                                    <p>作业帮</p>
+                                    <div class="popular_firm_summary_limit">
+                                        工具 / D轮及以上
+                                    </div>
+                                    <span>让优质教育触手可及</span>
+                                </div>
+                                <div class="popular_firm_date">
+                                    <div>
+                                        <p class="popular_firm_date_number">38</p>
+                                        <p class="popular_firm_date_sort">面试评价</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <p class="popular_firm_date_number">449</p>
+                                        <p class="popular_firm_date_sort">在招职位</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <p class="popular_firm_date_number">94%</p>
+                                        <p class="popular_firm_date_sort">简历处理率</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="popular_firm_ul">
+                        <li class="popular_firm_li">
+                            <div class="popular_firm_card">
+                                <div class="popular_firm_summary">
+                                    <div class="popular_firm_summary_firmimg">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_160x160/i/image/M00/06/0E/Cgp3O1bMA8aAQ7P5AAATgiqm6ik174.png"></a>
+                                    </div>
+                                    <p>云路天行</p>
+                                    <div class="popular_firm_summary_limit">
+                                        移动互联网 / 不需要融资
+                                    </div>
+                                    <span>公司一直秉承共同创造、共同发展、共...</span>
+                                </div>
+                                <div class="popular_firm_date">
+                                    <div>
+                                        <p class="popular_firm_date_number">5</p>
+                                        <p class="popular_firm_date_sort">面试评价</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <p class="popular_firm_date_number">3</p>
+                                        <p class="popular_firm_date_sort">在招职位</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <p class="popular_firm_date_number">100%</p>
+                                        <p class="popular_firm_date_sort">简历处理率</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular_firm_li">
+                            <div class="popular_firm_card">
+                                <div class="popular_firm_summary">
+                                    <div class="popular_firm_summary_firmimg">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_160x160/i/image/M00/04/00/CgqKkVbFXSeACvNAAACesP6K1Zw650.jpg"></a>
+                                    </div>
+                                    <p>世纪阳天</p>
+                                    <div class="popular_firm_summary_limit">
+                                        责任 执行 共赢 爱心
+                                    </div>
+                                    <span>人工智能,房产家居 / 不需要融资 / 杭州</span>
+                                </div>
+                                <div class="popular_firm_date">
+                                    <div>
+                                        <p class="popular_firm_date_number">62</p>
+                                        <p class="popular_firm_date_sort">面试评价</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <p class="popular_firm_date_number">19</p>
+                                        <p class="popular_firm_date_sort">在招职位</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <p class="popular_firm_date_number">100%</p>
+                                        <p class="popular_firm_date_sort">简历处理率</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular_firm_li">
+                            <div class="popular_firm_card">
+                                <div class="popular_firm_summary">
+                                    <div class="popular_firm_summary_firmimg">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_160x160/i/image3/M00/24/5B/Cgq2xlqWZ9qADb_lAABPw4Y95OQ012.png"></a>
+                                    </div>
+                                    <p>90KM</p>
+                                    <div class="popular_firm_summary_limit">
+                                        游戏 / A轮
+                                    </div>
+                                    <span>Create joy around the world</span>
+                                </div>
+                                <div class="popular_firm_date">
+                                    <div>
+                                        <p class="popular_firm_date_number">48</p>
+                                        <p class="popular_firm_date_sort">面试评价</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <p class="popular_firm_date_number">5</p>
+                                        <p class="popular_firm_date_sort">在招职位</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <p class="popular_firm_date_number">89%</p>
+                                        <p class="popular_firm_date_sort">简历处理率</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular_firm_li">
+                            <div class="popular_firm_card">
+                                <div class="popular_firm_summary">
+                                    <div class="popular_firm_summary_firmimg">
+                                        <a href="#"><img src="https://www.lgstatic.com/thumbnail_160x160/i/image/M00/07/D2/CgqKkVbOwmWAeDpuAAAo1fO92a4492.jpg"></a>
+                                    </div>
+                                    <p>骆驼电商</p>
+                                    <div class="popular_firm_summary_limit">
+                                        电商,消费生活 / 上市公司
+                                    </div>
+                                    <span>选择我们，选择更广阔的发展空间</span>
+                                </div>
+                                <div class="popular_firm_date">
+                                    <div>
+                                        <p class="popular_firm_date_number">29</p>
+                                        <p class="popular_firm_date_sort">面试评价</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <p class="popular_firm_date_number">5</p>
+                                        <p class="popular_firm_date_sort">在招职位</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <p class="popular_firm_date_number">52%</p>
+                                        <p class="popular_firm_date_sort">简历处理率</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="see_more">
+                    查看更多
+                </a>
+                <br><br><br>
+                <div class="separate_line">
+                    <ul class="separate_line_ul">
+                        <li class="separate_line_ul_li">友情链接</li>
+                        <div></div>
+                    </ul>
+                </div>
+                <div class="friend_links">
+                    <ul>
+                        <li>
+                            <a href="http://www.lagou.com/">
+                                拉勾网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.zgjsks.com/">
+                                教师网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.lagou.com/">
+                                招聘
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.liqucn.com/">
+                                app下载
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.jobui.com/">
+                                求职网站
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://kaiwu.lagou.com/course/courseInfo.htm?courseId=1">
+                                java课
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://kaiwu.lagou.com/course/courseInfo.htm?courseId=2">
+                                架构课
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.mokahr.com/">
+                                招聘系统
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.wangxiao.cn/">
+                                中大网校
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.job910.com/">
+                                教师招聘
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.woshipm.com/">
+                                人人都是产品经理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.xjhr.com/">
+                                新疆人才网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.chinairn.com/">
+                                研究报告
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.yixieshi.com/">
+                                互联网的一些事
+                            </a>
+                        </li>
+                    </ul>
+                    <span>展开</span>
+                </div>
+            </div>
+            <div class="splitter"></div>
+            <div class="foot">
+                <div class="inner_wrapper">
+                    <div class="inner_wrapper_left">
+                        <a href="#" class="foot_app foot_box">
+                            下载拉勾APP
+                        </a>
+                        <a href="#" class="foot_mina foot_box">
+                            微信小程序
+                            <div>
+                                <img src="https://www.lgstatic.com/lg-www-fed/common/widgets/footer_c/layout/img/lagou-mina-code_d70848a.png">
+                            </div>
+                        </a>
+                        <p>
+                            <div href="#" class="wechat">拉勾微信
+                                <img src="https://www.lgstatic.com/lg-www-fed/common/widgets/footer_c/layout/img/lg_pic_weixin@2x_c372698.png">
+                                <a class="logo_wechat"></a>
+                            </div>
+                            <span></span>
+                            <div href="#" class="weibo">拉勾微博
+                                <a class="logo_weibo"></a>
+                            </div>
+                        </p>
+                    </div>
+                    <div class="inner_wrapper_right">
+                        <div>
+                            <p>企业服务</p>
+                            <a href="#">招聘抢人宝典</a>
+                            <a href="#">公司搜索</a>
+                            <a href="#">拉勾APP</a>
+                        </div>
+                        <div>
+                            <p>用户帮助</p>
+                            <a href="#">帮助中心</a>
+                            <a href="#">用户服务协议</a>
+                            <a href="#">隐私政策</a>
+                            <a href="#">在线提问</a>
+                        </div>
+                        <div>
+                            <p>联系方式</p>
+                            <span>服务热线：4006 2828 35 (9:00 -18:00)</span>
+                            <a href="#">企业服务邮箱：cc@lagou.com</a>
+                            <a href="#">联系我们</a>
+                        </div>
+                    </div>
+                </div>              
+            </div>
+            <div class="copyright">
+                <div>
+                    ©2018 拉勾网
+                    <a href="#" class="filing">京ICP备14023790号-2</a>
+                    <a href="#" class="police">
+                        京公网安备 11010802024043号
+                        <a class="logo_police"></a>     
+                    </a>
+                    <p>
+                        <a class="logo_jubao"></a>
+                        <span>违法和不良信息举报</span>
+                        <span>电话: 4006 2828 35</span>
+                        <span>邮箱: cc@lagou.com</span>
+                    </p>
+                    <a class="logo_lagou_icon"></a>   
+                </div>
+            </div>
+        </div>   
+        <script>
+            var totop = document.getElementById('aaa');   
+            var mySwiper = new Swiper ('.swiper-container', {
+                loop: true, // 循环模式选项
+                autoplay:true,
+                pagination: {
+                    el: '.swiper-pagination',
+                }
+            }) 
+            // aaa.onclick = function(){
+            //     document.documentElement.scrollTop = 0;
+            //     // totop.scrollTop = 0;
+            //     console.log(totop)
+            // }
+        </script>    
+    </body>
+</html>
